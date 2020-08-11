@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<h1>Calculator</h1>
+<body>
+<form action="http://localhost:63342/Calculator/Calculator.html?_ijt=oevnqc4uemol0gh7nlggu02plp">
+    <p>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    </p>
+    <br>
+    <p>
+        <input onclick="add()" type="button" value="Addition(+)">
+        <input onclick="sub()" type="button" value="Subtraction(-)">
+        <input onclick="multi()" type="button" value="Multiplication(X)">
+        <input onclick="div()" type="button" value="Division(/)">
+    </p>
+</form>
+<p><Span id="result"> </Span></p>
+<script>
+
+    function add() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 + number2
+        document.getElementById("result").innerText = "Result: " + result.toFixed(2)
+    }
+    function sub() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 - number2
+        document.getElementById("result").innerText = "Result: " + result.toFixed(2)
+    }
+    function multi() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 * number2
+        document.getElementById("result").innerText = "Result: " + result.toFixed(2)
+    }
+    function div() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 / number2
+        document.getElementById("result").innerText = "Result: " + result.toFixed(2)
+    }
+</script>
+</body>
+</html>
