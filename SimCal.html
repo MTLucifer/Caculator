@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    td,th {
+        border-style: solid;
+        border-width: thin;
+    }
+    input {
+        width: 30px;
+        height: 30px;
+    }
+</style>
+<table>
+    <tr>
+        <th colspan="4"><input type="text" id="display" style="width: 120px"></th>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="key('1')" value="1"></td>
+        <td><input type="button" onclick="key('2')" value="2"></td>
+        <td><input type="button" onclick="key('3')" value="3"></td>
+        <td><input type="button" onclick="key('+')" value="+"></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="key('4')" value="4"></td>
+        <td><input type="button" onclick="key('5')" value="5"></td>
+        <td><input type="button" onclick="key('6')" value="6"></td>
+        <td><input type="button" onclick="key('-')" value="-"></td>
+    </tr>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="key('7')" value="7"></td>
+        <td><input type="button" onclick="key('8')" value="8"></td>
+        <td><input type="button" onclick="key('9')" value="9"></td>
+        <td><input type="button" onclick="key('*')" value="x"></td>
+    </tr>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="clr()" value="C"></td>
+        <td><input type="button" onclick="key('0')" value="0"></td>
+        <td><input type="button" onclick="result()" value="="></td>
+        <td><input type="button" onclick="key('/')" value="/"></td>
+    </tr>
+    </tr>
+</table>
+<script>
+    function key(val) {
+        document.getElementById("display").value+=val
+    }
+    function result() {
+        let a = document.getElementById("display").value
+        let b = eval(a)
+        document.getElementById("display").value = b
+    }
+    function clr() {
+        document.getElementById("display").value = ""
+    }
+</script>
+</body>
+</html>
